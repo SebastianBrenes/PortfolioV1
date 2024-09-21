@@ -1,8 +1,16 @@
-<header class="flex justify-between items-center w-[800px] py-10 h-16">
-    <img class="rounded-full w-12 h-12" src="https://media.licdn.com/dms/image/v2/D4D03AQFepF-z_Yugiw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1722797724620?e=1732147200&v=beta&t=xejEhqJUzCr5zuN_otp4h4DUzBrmdWCg_MBZWakhn-s" alt="profile-pic"/>
-    <nav class="flex items-center space-x-9">
+---
+import Badge from '../components/Badge.astro';
+---
+
+<header class="items-center"> 
+    <nav class="flex flex-row gap-x-10 items-center opacity-70 justify-between py-5 w-[700px] mx-auto">
         <a href="#">Home</a></li>
         <a href="#">About</a></li>
+        <div class="flex items-center justify-center animate-pulse">
+            <a href="https://www.linkedin.com/in/sebast%C3%ADan-rodr%C3%ADguez-6111a1301/" target="_blank" rel="noopener noreferrer">
+                <Badge>Available</Badge>
+            </a>
+        </div>
         <a href="#">Projects</a></li>
         <a href="#">Contact</a></li>
     </nav>
