@@ -1,54 +1,37 @@
-# Astro Starter Kit: Basics
+# My Web Developer Portfolio
 
-```sh
-npm create astro@latest -- --template basics
-```
+Welcome to my personal web developer portfolio! This project showcases my skills and work as a **junior full-stack developer**, built using **Astro**, **JavaScript**, and **Tailwind CSS**.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## Table of Contents
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Setup](#setup)
+- [Project Structure](#project-structure)
+- [Contact](#contact)
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## Features
 
-## 🚀 Project Structure
+- 🚀 **Fast and Lightweight**: Built with Astro, optimized for speed and performance.
+- 🎨 **Modern Design**: Clean, responsive UI using Tailwind CSS.
+- 🛠️ **Interactive Projects**: Explore some of my key projects, such as:
+  - Taskies: A task manager app inspired by Trello.
+  - AI Chatbot: An AI support chatbot for companies.
+  - 
+- 📱 **Mobile-Friendly**: Fully responsive design.
+- 🌐 **Accessible**: Follows modern accessibility standards.
 
-Inside of your Astro project, you'll see the following folders and files:
+## Technologies Used
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+- [Astro](https://astro.build/) - Static site generator.
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - For interactive features.
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Setup
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+To run this project locally, follow these steps:
 
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/your-username/your-portfolio.git
+   cd your-portfolio
