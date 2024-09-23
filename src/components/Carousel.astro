@@ -1,0 +1,91 @@
+---
+const technologies = [
+  { name: 'Python', icon: '<i class="devicon-python-plain colored"></i>' },
+  { name: 'Flutter', icon: '<i class="devicon-flutter-plain colored"></i>' },
+  { name: 'HTML5', icon: '<i class="devicon-html5-plain colored"></i>' },
+  { name: 'CSS3', icon: '<i class="devicon-css3-plain colored"></i>' },
+  { name: 'Tailwind CSS', icon: '<i class="devicon-tailwindcss-plain colored"></i>' },
+  { name: 'JavaScript', icon: '<i class="devicon-javascript-plain colored"></i>' },
+  { name: 'React', icon: '<i class="devicon-react-original colored"></i>' },
+  { name: 'Node.js', icon: '<i class="devicon-nodejs-plain colored"></i>' },
+  { name: 'Git', icon: '<i class="devicon-git-plain colored"></i>' },
+  { name: 'npm', icon: '<i class="devicon-npm-original-wordmark colored"></i>' },
+];
+---
+
+<div class="relative w-full max-w-3xl mx-auto overflow-hidden">
+  <div class="carousel-container">
+    <div class="carousel-track">
+      {technologies.map((tech) => (
+        <div class="carousel-item">
+          <div class="bg-transparent p-6 flex flex-col items-center">
+            <div class="text-5xl mb-2" set:html={tech.icon} />
+            <span class="text-center font-semibold">{tech.name}</span>
+          </div>
+        </div>
+      ))}
+    </div>
+    <div class="carousel-track" aria-hidden="true">
+      {technologies.map((tech) => (
+        <div class="carousel-item">
+          <div class="bg-transparent p-6 flex flex-col items-center">
+            <div class="text-5xl mb-2" set:html={tech.icon} />
+            <span class="text-center font-semibold">{tech.name}</span>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+
+<style>
+  @import url('https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css');
+
+  .carousel-container {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .carousel-track {
+    display: flex;
+    animation: scroll 10s linear infinite; /* Change to your preferred animation */
+  }
+
+  .carousel-item {
+    flex: 0 0 auto;
+    width: 180px;
+    padding: 1rem;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .carousel-container:hover .carousel-track {
+    animation-play-state: paused;
+  }
+</style>
+
+<script>
+  function updateCarouselWidth() { // Update carousel width on window resize
+    const container = document.querySelector('.carousel-container') as HTMLElement | null;
+    const track = document.querySelector('.carousel-track') as HTMLElement | null;
+    
+    if (container && track) {
+      const items = track.querySelectorAll('.carousel-item');
+      const totalWidth = Array.from(items).reduce((sum, item) => sum + (item as HTMLElement).offsetWidth, 0);
+      
+      track.style.width = `${totalWidth}px`;
+      container.style.width = `${window.innerWidth}px`;
+    }
+  }
+
+  window.addEventListener('load', updateCarouselWidth);
+  window.addEventListener('resize', updateCarouselWidth);
+</script>
