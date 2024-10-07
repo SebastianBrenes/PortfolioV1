@@ -6,15 +6,17 @@ import Container from '../components/Container.astro';
 
 <Layout title="Portfolio Sebastián Rodríguez - Software Developer" description="If you're looking for a software developer, I'm your guy. I'm a passionate and creative individual looking for new challenges and opportunities to grow my skills and knowledge.">
 	<main>
-		<Container>
+		<Container class="pt-14">
 
 			<img class="rounded-full w-40 h-40 mb-10" src="https://media.licdn.com/dms/image/v2/D4D03AQFepF-z_Yugiw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1722797724620?e=1732147200&v=beta&t=xejEhqJUzCr5zuN_otp4h4DUzBrmdWCg_MBZWakhn-s" alt="profile-pic"/>
 
 			<h1 class="text-6xl font-bold mb-5">Hi, I'm 
-				<span class="inline-block animate-rainbow bg-gradient-to-r from-red-500 via-yellow-500 to-purple-500 text-transparent bg-clip-text">Sebastián Rodríguez</span>
+				<span class="inline-block animate-rainbow bg-gradient-to-r from-red-500 via-yellow-500 to-purple-500 text-transparent bg-clip-text pb-2">Sebastián Rodríguez</span>
 				<span class="inline-block animate-wave">👋</span>
 			</h1>
+
 			<h2 class="text-4xl mb-5 opacity-65">I'm a <span>Software Developer</span></h2>
+			
 			<p class="mb-6 text-lg leading-relaxed text-zinc-50 dark:text-gray-300 dark:bg-gray-800  rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
 				Since I was a kid, <span class="font-semibold text-purple-600 dark:text-blue-100 animate-pulse">computers</span> 💻 always fascinated
 				me. I could spend hours exploring them, and over time, 
@@ -30,12 +32,12 @@ import Container from '../components/Container.astro';
 			</p>
 		</Container>
 
-	<Container>
+	<Container class="pt-1">
 		<Carousel />
 	</Container>
 
 	<Container>
-		
+
 	</Container>
 
 	</main>
