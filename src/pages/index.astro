@@ -1,11 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Carousel from '../components/Carousel.astro';
+import Container from '../components/Container.astro';
 ---
 
 <Layout title="Portfolio Sebastián Rodríguez - Software Developer" description="If you're looking for a software developer, I'm your guy. I'm a passionate and creative individual looking for new challenges and opportunities to grow my skills and knowledge.">
 	<main>
-		<section class="w-full lg:w-[700px] mx-auto pt-28 pb-4">
+		<Container>
 
 			<img class="rounded-full w-40 h-40 mb-10" src="https://media.licdn.com/dms/image/v2/D4D03AQFepF-z_Yugiw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1722797724620?e=1732147200&v=beta&t=xejEhqJUzCr5zuN_otp4h4DUzBrmdWCg_MBZWakhn-s" alt="profile-pic"/>
 
@@ -27,8 +28,16 @@ import Carousel from '../components/Carousel.astro';
 				a web app designed to organize notes into different folders and <span class="">workspaces</span>. 
 				My main focus is on creating <span class="">efficient solutions</span> that provide a seamless <span class="">user experience</span>. 
 			</p>
-	</section>
-	<Carousel />
+		</Container>
+
+	<Container>
+		<Carousel />
+	</Container>
+
+	<Container>
+		
+	</Container>
+
 	</main>
 </Layout>
 
