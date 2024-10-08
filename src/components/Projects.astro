@@ -1,5 +1,101 @@
 ---
-
+const PROJECTS = [
+  {
+    name: 'Taskies',
+    description: 'A web app designed to organize notes into different folders and workspaces.',
+    link: 'https://github.com/SebastianBrenes',
+    image: 'https://gridfox.com/assets/templates/taskmanagertemplate.jpg',
+    technologies: ['React', 'Typescript', 'TailwindCSS', 'NextJS', 'NodeJS', 'MongoDB', 'ExpressJS'],
+  },
+  {
+    name: 'Project 1',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    link: 'https://github.com/SebastiánRodríguez/Taskies',
+    image: 'https://static.vecteezy.com/system/resources/previews/018/735/340/non_2x/game-landing-page-design-free-vector.jpg',
+    technologies: ['React', 'Typescript', 'TailwindCSS', 'NextJS', 'NodeJS', 'MongoDB', 'ExpressJS'],
+  },
+  {
+    name: 'Project 2',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    link: 'https://github.com/SebastiánRodríguez/Taskies',
+    image: 'https://cdn.prod.website-files.com/6009ec8cda7f305645c9d91b/60107f08346568225a7d9951_6002086f72b72701db01e57d_asana-rebel.jpeg',
+    technologies: ['React Native', 'Typescript', 'TailwindCSS', 'NextJS', 'NodeJS', 'MongoDB', 'ExpressJS'],
+  },
+];
 ---
 
+<div class="space-y-16">
+  {PROJECTS.map((project, index) => (
+    <div 
+      class="group relative overflow-hidden rounded-2xl transition-all duration-300 ease-in-out hover:scale-105"
+    >
+      <img 
+        src={project.image} 
+        alt={project.name} 
+        class="w-full h-auto object-cover transition-all duration-300 ease-in-out group-hover:scale-110"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent transition-all duration-300 ease-in-out group-hover:from-black/80">
+        <div class="absolute bottom-0 left-0 p-6 space-y-2">
+          <h3 class="text-2xl font-bold text-white">{project.name}</h3>
+          <p class="text-sm text-gray-300">{project.description}</p>
+          <div class="flex flex-wrap gap-2 pt-2">
+            {project.technologies.slice(0, 3).map((tech) => (
+              <span class="px-2 py-1 bg-white/20 text-white rounded-full text-xs backdrop-blur-sm">
+                {tech}
+              </span>
+            ))}
+            {project.technologies.length > 3 && (
+              <div class="relative tech-hover">
+                <span 
+                  class="px-2 py-1 bg-white/20 text-white rounded-full text-xs backdrop-blur-sm cursor-pointer"
+                >
+                  +{project.technologies.length - 3} more
+                </span>
+                <div class="absolute bottom-full left-0 mb-2 p-2 bg-black/80 rounded-lg backdrop-blur-sm hidden tech-list">
+                  <div class="flex flex-col gap-1">
+                    {project.technologies.slice(3).map((tech) => (
+                      <span class="text-white text-xs whitespace-nowrap">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+          <a 
+            href={project.link} 
+            class="inline-block px-4 py-2 bg-white/20 text-white rounded-lg hover:bg-white/30 transition-colors duration-300 ease-in-out backdrop-blur-sm"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Project
+          </a>
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
 
+<style>
+  .tech-hover:hover .tech-list {
+    display: block;
+  }
+</style>
+
+<script>
+  document.addEventListener('astro:page-load', () => {
+    const techHovers = document.querySelectorAll('.tech-hover');
+    techHovers.forEach(hover => {
+      const techList = hover.querySelector('.tech-list');
+      if (techList instanceof HTMLElement) {
+        hover.addEventListener('mouseenter', () => {
+          techList.style.display = 'block';
+        });
+        hover.addEventListener('mouseleave', () => {
+          techList.style.display = 'none';
+        });
+      }
+    });
+  });
+</script>
