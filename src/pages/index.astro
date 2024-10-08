@@ -2,6 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import Carousel from '../components/Carousel.astro';
 import Container from '../components/Container.astro';
+import CodingSVG from '../components/icons/CodingSVG.astro';
+import Projects from '../components/Projects.astro';
 ---
 
 <Layout title="Portfolio Sebastián Rodríguez - Software Developer" description="If you're looking for a software developer, I'm your guy. I'm a passionate and creative individual looking for new challenges and opportunities to grow my skills and knowledge.">
@@ -37,6 +39,11 @@ import Container from '../components/Container.astro';
 	</Container>
 
 	<Container>
+		<h2 class="text-4xl mb-6 flex items-center gap-x-2 opacity-70">
+			<CodingSVG />
+			Projectss
+		</h2>
+		<Projects />
 
 	</Container>
 
