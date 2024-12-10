@@ -7,7 +7,7 @@ Welcome to my personal web developer portfolio! This project showcases my skills
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Setup](#setup)
-- [Project Structure](#project-structure)
+- [Website](https://sebastianrodriguez.netlify.app/#top)
 - [Contact](#contact)
 
 ## Features
